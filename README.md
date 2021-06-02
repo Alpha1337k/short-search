@@ -2,7 +2,7 @@
 Extension to quicky enter the search bar of a website
 
 ## Installing
-* `git clone https://github.com/Alpha1337k/wiki-redirect.git`
+* `git clone https://github.com/Alpha1337k/short-search.git`
 * Goto `chrome://extensions/`
 * Enable developer mode
 * Click on `Load extension package` and select the cloned folder
