@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body style="min-width:300px;">
+	<h1>Short Search</h1>
+	<h2>Add Searchbar</h2>
+	<p>Url regex <a href="https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285">?</a></p>
+	<input type="text" id="regex-url" placeholder="eg. https://www.youtube.com/*">
+	<br>
+	<p>Identifier</p>
+	<input type="text" id="Identifier" placeholder="eg. main-input">
+	<p>Type of Identifier</p>
+	<input type="radio" id="typeid" name="id-type" value="#" checked>
+	<label for="id">id</label><br>
+	<input type="radio" id="typeid" name="id-type" value=":">
+	<label for="name">name</label><br>
+	<input type="radio" id="typeid" name="id-type" value=".">
+	<label for="class">class</label><br><br>
+	<p id="statusp" style="display: none;"></p>
+    <button id="add">Add Identifier</button>
+
+	<h2>Manage Searchbars</h2>
+	<table id="div-Searchbars">
+		<tr>
+			<th>Url</th>
+			<th>Id</th>
+			<th></th>
+		</tr>
+
+	</table>
+	<br>
+	<p id="status-save" style="display: none;"></p>
+	<button id="savebtn">Save Changes</button>
+	<script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+{
+	"name": "Short Search",
+	"description": "Quicky enter the search bar of a website",
+	"version": "1.0",
+	"manifest_version": 2,
+    "permissions": [
+        "tabs", "https://*/*", "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://*/*"],
+            "js": ["src/content.js"]
+        }
+    ],
+    "commands": {
+        "goto-search": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+1",
+                "mac": "Ctrl+Shift+1"
+            },
+            "description": "Goto and enter searchbar"
+        }
+    },
+    "background": {
+        "scripts": ["src/bg.js"],
+        "persistent": false
+    },
+	"browser_action": {
+        "default_popup": "src/popup.html"
+    }
+}
