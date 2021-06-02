@@ -7,10 +7,28 @@ class searchmatch {
 
 var webpages;
 
-chrome.storage.sync.get(['list'], function(result) {
-	webpages = JSON.parse(result.list);
-	console.log(webpages);
+chrome.storage.sync.get(['list'], function(res) {
+	if (Object.keys(res).length == 0)
+	{
+		console.log("Added filler!");
+		chrome.storage.sync.set({'list': "[{\"uri\":\"https://github.com/*\",\"id\":\":q\"}]"});
+		webpages = JSON.parse("[{\"uri\":\"https://github.com/*\",\"id\":\":q\"}]");
+	}
+	else
+	{
+		chrome.storage.sync.get(['list'], function(result) {
+			console.log(result);
+			if (result.list == undefined)
+				result = add_filler();
+			webpages = JSON.parse(result.list);
+			console.log(webpages);
+		});
+	}
 });
+
+
+
+
 	
 chrome.commands.onCommand.addListener(function (command) {
 		
