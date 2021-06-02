@@ -50,8 +50,6 @@ but.addEventListener("click", async () => {
 	var sm = new searchmatch(document.getElementById("regex-url").value, 
 	type + document.getElementById("Identifier").value)
 
-	alert(sm.id);
-	alert(sm.uri);
 	listData.push(sm);
 	let i = listData.length - 1;
 	searchlist.innerHTML += '<tr id="trw'+ i +'"><td>' + listData[i].uri + "</td><td>" + listData[i].id + '</td><td><button class="deleter" id="'+i+'">X</td>'
